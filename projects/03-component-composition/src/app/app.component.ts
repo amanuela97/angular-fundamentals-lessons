@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [UserinfoComponent],
   template: `
-    <section class="menu">🏠 Home</section>
+    <section class="menu">🏠 Home <app-userinfo /></section>
     <section class="main">
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
