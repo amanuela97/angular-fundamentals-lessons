@@ -39,14 +39,7 @@ import { Car } from '../car';
   styles: ``,
 })
 export class ListingComponent {
-  @Input() car: Car = {
-    make: 'Foyoda',
-    model: 'Famery',
-    miles: 54354,
-    price: 1000,
-    year: 2022,
-    transmission: 'Automatic',
-  };
+  @Input({ required: true }) car!: Car;
   @Output() carSaved = new EventEmitter<Car>();
   handleCarSaved() {
     this.carSaved.emit(this.car);
