@@ -11,7 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
       <form
         name="blogForm"
         [formGroup]="blogForm"
-        (ngSubmit)="(handleFormSubmit)"
+        (ngSubmit)="handleFormSubmit()"
       >
         <section>
           <label for="title">Post Title</label>
